@@ -1,3 +1,5 @@
+import os
+
 import numpy as np
 from scipy.stats import norm
 import matplotlib.pyplot as plt
@@ -16,5 +18,5 @@ plt.plot(x_line, y2)
 # Add labels and show
 plt.ylabel("Probability Density")
 plt.grid(True, alpha=0.3)
-plt.savefig('visualizing_spread.svg', transparent=True)
+plt.savefig(f"assets/{os.path.basename(__file__).replace('.py', '.svg')}", transparent=True)
 plt.show()

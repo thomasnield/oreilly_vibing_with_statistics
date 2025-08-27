@@ -1,1 +1,21 @@
-x
+import numpy as np
+from scipy.stats import mode
+
+filament_measurements = [
+    1.73, 1.73, 1.73, 1.75, 1.72, 1.69,
+    1.76, 1.69, 1.70, 1.67, 1.75, 1.71,
+    1.70, 1.71, 1.68, 1.70, 1.74, 1.72,
+    1.76, 1.69, 1.76, 1.73, 1.71, 1.73,
+    1.70, 1.74, 1.74, 1.76, 1.67, 1.74,
+    1.66, 1.67, 1.70, 1.69
+]
+
+# find the mean, median, mode, interquartile range, and standard deviation
+print(f"MEAN: {np.mean(filament_measurements):.2f}")
+print(f"MEDIAN: {np.median(filament_measurements):.2f}")
+print(f"MODE: {mode(filament_measurements)[0]:.2f}")
+
+iqr = np.percentile(filament_measurements, [75, 25])
+print(f"INTERQUARTILE RANGE: {iqr[1]-iqr[0]:.2f}")
+print(f"STANDARD DEVIATION: {np.std(filament_measurements, ddof=1):.2f}")
+
