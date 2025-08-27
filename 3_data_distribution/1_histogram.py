@@ -3,9 +3,9 @@ import os
 from matplotlib import pyplot as plt
 import pandas as pd
 
-df = pd.read_csv('birdstrike.csv', index_col='INDEX_NR', parse_dates=["INCIDENT_DATE"])
+X = pd.read_csv('birdstrike.csv', usecols=["HEIGHT"]).dropna()
 
-values, bins, bars = plt.hist(df['HEIGHT'], bins=30, edgecolor='white')
+values, bins, bars = plt.hist(X, bins=30, edgecolor='white')
 plt.xlabel("HEIGHT (Feet)")
 plt.ylabel("# Bird Strikes")
 plt.title('Height vs Bird Strike Incidents')
