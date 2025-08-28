@@ -4,7 +4,7 @@ from scipy.stats import gaussian_kde
 from matplotlib import pyplot as plt
 import pandas as pd
 
-X = pd.read_csv('birdstrike.csv', usecols=["HEIGHT"]).dropna()
+X = pd.read_csv('../data/birdstrike.csv', usecols=["HEIGHT"]).dropna()
 
 data = X['HEIGHT'].values
 

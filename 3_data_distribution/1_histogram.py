@@ -3,7 +3,7 @@ import os
 from matplotlib import pyplot as plt
 import pandas as pd
 
-X = pd.read_csv('birdstrike.csv', usecols=["HEIGHT"]).dropna()
+X = pd.read_csv('../data/birdstrike.csv', usecols=["HEIGHT"]).dropna()
 
 values, bins, bars = plt.hist(X, bins=30, edgecolor='white')
 plt.xlabel("HEIGHT (Feet)")

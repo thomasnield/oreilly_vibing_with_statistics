@@ -2,7 +2,7 @@ from numpy import percentile
 import pandas as pd
 
 # Get SPEED column, remove missing values
-X = pd.read_csv('birdstrike.csv', usecols=["SPEED"]).dropna()
+X = pd.read_csv('../data/birdstrike.csv', usecols=["SPEED"]).dropna()
 
 # these would bound the box
 q25 = percentile(X, 25)

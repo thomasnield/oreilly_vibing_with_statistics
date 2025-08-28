@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from matplotlib import pyplot as plt
 import pandas as pd
 
-X = pd.read_csv('birdstrike.csv', usecols=["SPEED"]).dropna()
+X = pd.read_csv('../data/birdstrike.csv', usecols=["SPEED"]).dropna()
 
 sns.boxplot(X)
 plt.title('Speed vs Bird Strike Incidents')
