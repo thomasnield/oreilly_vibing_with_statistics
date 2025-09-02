@@ -15,7 +15,7 @@ print(f"MEAN: {np.mean(filament_measurements):.2f}")
 print(f"MEDIAN: {np.median(filament_measurements):.2f}")
 print(f"MODE: {mode(filament_measurements)[0]:.2f}")
 
-iqr = np.percentile(filament_measurements, [75, 25])
+iqr = np.percentile(filament_measurements, [25, 75])
 print(f"INTERQUARTILE RANGE: {iqr[1]-iqr[0]:.2f}")
 print(f"STANDARD DEVIATION: {np.std(filament_measurements, ddof=1):.2f}")
 
